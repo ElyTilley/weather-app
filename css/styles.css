@@ -2,7 +2,57 @@
 YOUR STYLES
 *******************/
 
+// http://codepen.io/manikoth/pen/rxXrvb.css
 
+// Section Containers
+section {
+  min-height: 20em;
+  width: 100%;
+  position: absolute;
+}
+
+#homescreen {
+  background: yellow;
+  z-index: 1;
+}
+
+#one {
+  background: red;
+}
+
+#two {
+  background: green;
+}
+
+#three {
+  background: blue;
+}
+
+:target {
+  z-index: 1;
+}
+
+
+
+// Minimal initial style of sidebar
+$sidebar-width: 16em;
+$sidebar-width-neg: -16em;
+
+.sidr {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: $sidebar-width;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.left {
+        left: $sidebar-width-neg;
+        right: auto;
+    }
+}
 
 
 /********************
