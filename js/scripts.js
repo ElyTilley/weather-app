@@ -9,38 +9,90 @@ $('#sidr-show-hide').sidr();
 // Close from inside
 $('#close').sidr({
   method: 'close'
-})
+});
 
+// SPOKANE
 $.simpleWeather({
-    location: 'Miami',
+    location: 'Spokane',
     unit: 'f',
     success: function(weather) {
       // Entire weather object
       console.log(weather);
       
+      // Display Data
+      $('#spokane .temp').text(weather.temp);
+      $('#spokane .city').text(weather.city);
+      $('#spokane img').attr('src', weather.image);
       
-      // Display Current
-      $('.city').text(weather.city);
-      $('.temp').text(weather.temp)
-      
-      // Display Future Weather
-      // Day 1
-      $('aside figure:nth-child(1) h2').text(weather.forecast[0].day);
-      $('aside figure:nth-child(1) img').attr('src', weather.forecast[0].image);
-      $('aside figure:nth-child(1) figcaption').text(weather.forecast[0].text);
-      $('aside figure:nth-child(1) .high').text(weather.forecast[0].high);
-      // Day 2
-      $('aside figure:nth-child(2) h2').text(weather.forecast[1].day);
-      $('aside figure:nth-child(2) img').attr('src', weather.forecast[1].image);
-      $('aside figure:nth-child(2) figcaption').text(weather.forecast[1].text);
-      $('aside figure:nth-child(2) .high').text(weather.forecast[1].high);
-      
-      console.log(weather.forecast[0].high);
-    
     },
     error: function(error) {
       // Show if weather cannot be retreived
-      console.log('Go Look Outside :-|');
+      console.log('Look outside.');
     }
   
   });
+
+
+// TOLEDO
+$.simpleWeather({
+    location: 'Toledo',
+    unit: 'f',
+    success: function(weather) {
+      // Entire weather object
+      console.log(weather);
+      
+      // Display Data
+      $('#toledo .temp').text(weather.temp);
+      $('#toledo .city').text(weather.city);
+      $('#toledo img').attr('src', weather.image);
+      
+    },
+    error: function(error) {
+      // Show if weather cannot be retreived
+      console.log('Look outside.');
+    }
+  
+  });
+
+
+// SET LOCATION FOR LOCAL
+$('#local').click( function() {
+      
+    //load weather using your lat/long coordinates
+    navigator.geolocation.getCurrentPosition(function(position) {
+      
+      // Check lat/long coordinates
+      var lat = position.coords.latitude;
+      var long = position.coords.longitude;
+      
+      console.log(lat, long);
+      
+      // Send to SimpleWeather
+      getWeather( lat + ',' + long ); 
+    });
+   
+});
+
+// LOCAL for which Location has been set
+$.simpleWeather({
+    location: location,
+    unit: 'f',
+    success: function(weather) {
+      // Entire weather object
+      console.log(weather);
+      
+      // Display Data
+      $('#local .temp').text(weather.temp);
+      $('#local .city').text(weather.city);
+      $('#local img').attr('src', weather.image);
+      
+    },
+    error: function(error) {
+      // Show if weather cannot be retreived
+      console.log('Look outside.');
+    }
+  
+  });
+
+
+
