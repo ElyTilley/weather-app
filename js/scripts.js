@@ -3,12 +3,11 @@
 // https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js
 // https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/jquery.sidr.min.js
 
-// call Sidr Plugin. Toggle by Default
-$('#sidr-show-hide').sidr();
-
-// Close from inside
-$('#close').sidr({
-  method: 'close'
+// Toggle, Show/Hide Drawer
+$('.toggle-drawer').click( function() {
+  
+  $('aside').toggleClass('drawer');
+  
 });
 
 // SPOKANE
@@ -22,7 +21,9 @@ $.simpleWeather({
       // Display Data
       $('#spokane .temp').text(weather.temp);
       $('#spokane .city').text(weather.city);
-      $('#spokane img').attr('src', weather.image);
+      $('#spokane i').addClass('icon-'+ weather.code);
+      $('#spokane .high').text(weather.high);
+      $('#spokane .low').text(weather.low);
       
     },
     error: function(error) {
@@ -44,7 +45,9 @@ $.simpleWeather({
       // Display Data
       $('#toledo .temp').text(weather.temp);
       $('#toledo .city').text(weather.city);
-      $('#toledo img').attr('src', weather.image);
+      $('#toledo i').addClass('icon-'+ weather.code);
+      $('#toledo .high').text(weather.high);
+      $('#toledo .low').text(weather.low);
       
     },
     error: function(error) {
@@ -86,7 +89,9 @@ $.simpleWeather({
       // Display Data
       $('#local .temp').text(weather.temp);
       $('#local .city').text(weather.city);
-      $('#local img').attr('src', weather.image);
+      $('#local i').addClass('icon-'+ weather.code);
+      $('#local .high').text(weather.high);
+      $('#local .low').text(weather.low);
       
     },
     error: function(error) {

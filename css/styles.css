@@ -2,57 +2,52 @@
 YOUR STYLES
 *******************/
 
-// http://codepen.io/manikoth/pen/rxXrvb.css
+/* http://codepen.io/manikoth/pen/rxXrvb.css */
 
-// Section Containers
+/* Drawer */
+aside {
+  background: #ccc;
+  position: fixed;
+  height: 100%;
+  min-height: 100%;
+  left: -200px;
+  width: 200px;
+  /* always on top */
+  z-index: 999999;
+  /* animate */
+  transition: left .25s;
+}
+
+/* Show Drawer */
+.drawer {
+  left: 0;
+}
+
+/* All Sections */
 section {
-  min-height: 20em;
-  width: 100%;
   position: absolute;
+  height: 100%;
+  width: 100%;
 }
-
-
-
-
-
+/* Section 1  */
 #spokane {
+  background: red;
 }
-
+/* Section 2  */
 #toledo {
+  background: green;
 }
-
-#location {
+/* Section 3  */
+#local {
+  background: blue;
 }
-
+/* :target S election from Sidebar */
 :target {
   z-index: 1;
 }
 
-
-
-// Minimal initial style of sidebar
-$sidebar-width: 16em;
-$sidebar-width-neg: -16em;
-
-.sidr {
-    display: block;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    z-index: 999999;
-    width: $sidebar-width;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    &.left {
-        left: $sidebar-width-neg;
-        right: auto;
-    }
-}
-
-
-//icons
-@font-face {
+/* icons */
+ @font-face {
     font-family: 'weather';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.eot');
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16425/artill_clean_icons-webfont.eot#iefix') format('embedded-opentype'),
@@ -125,38 +120,3 @@ i {
 http://erikflowers.github.io/weather-icons/
 */
 
-/********************
-MEDIA QUERIES
-*******************/
-/* Mobile: 320px = 20em */
-@media screen and (min-width: 20em) { 
-
-  /* Diagnostic Styling. Delete When Done. */
-  body:before {
-       background: yellow;
-       content: "Mobile Size";
-  }
-  
-}
-
-/* Tablet:  768px = 160em */
-@media screen and (min-width: 48em)  {
-
-  /* Diagnostic Styling. Delete When Done. */
-  body:before {
-       background: yellow;
-       content: "Tablet Size";
-  }
-
-}
-
-/* Desktop: 1280px = 80em */
-@media screen and (min-width: 80em) { 
-  
-  /* Diagnostic Styling. Delete When Done. */
-  body:before {
-       background: yellow;
-       content: "Desktop Size";
-  }
-
-}

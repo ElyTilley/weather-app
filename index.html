@@ -17,42 +17,59 @@
 	
   <!-- YOUR AWESOME WEBSITE -->
 	
-<a id="sidr-show-hide" href="#sidr">&#9776;</a>
-
 <h1>Your Weather</h1>
 
 <!--   TODAY IN SPOKANE   -->
 <section id="spokane">
-  <h1><span class="temp">00</span>&#x2109;</h1>
+  <a class="toggle-drawer">&#9776;</a>
   <h1 class="city">City</h1>
-  <img src="http://placehold.it/100x100" alt="" />
+  <h1><span class="temp">00</span>&#x2109;</h1>
+  <h3>
+      <span class="high">00</span>&#x2109;
+      <span class="low">00</span>&#x2109;
+  </h3>
+  <i class=""> </i>
+        
 </section>
 
 
 <!--   TODAY IN TOLEDO   -->
 <section id="toledo">
-  <h1><span class="temp">00</span>&#x2109;</h1>
+  <a class="toggle-drawer">&#9776;</a>
   <h1 class="city">City</h1>
-  <img src="http://placehold.it/100x100" alt="" />
+  <h1><span class="temp">00</span>&#x2109;</h1>
+  <h3>
+      <span class="high">00</span>&#x2109;
+      <span class="low">00</span>&#x2109;
+  </h3>
+  <i class=""> </i>
 </section>
 
 <!--   TODAY IN A NEW LOCATION   -->
 <section id="local">
-  <h1><span class="temp">00</span>&#x2109;</h1>
+  <a class="toggle-drawer">&#9776;</a>
   <h1 class="city">City</h1>
-  <img src="http://placehold.it/100x100" alt="" />
-  <button>Set Location</button>
+  <h1><span class="temp">00</span>&#x2109;</h1>
+  <h3>
+      <span class="high">00</span>&#x2109;
+      <span class="low">00</span>&#x2109;
+  </h3>
+  <i class=""> </i>
+  <h4><button>Set Location</button></h4>
 </section>
 
 
-<!--   SIDE BAR    -->
-<aside id="sidr">
+<!-- Sidebar/Drawer -->
+<aside class="">
+
   <ul>
-    <li><a href="#spokane">Spokane</a></li>
-    <li><a href="#toledo">Toledo</a></li>
-    <li><a href="#local">Get Location</a></li>
+    <li><a href="#spokane" id="city-1">Spokane</a></li>
+    <li><a href="#toledo" id="city-2">Toledo</a></li>
+    <li><a href="#local" id="city-3">Current Location</a></li>
   </ul>
-  <a href="#sidr" id="close">X</a>
+  
+  <a class="toggle-drawer">&#x2715;</a>
+  
 </aside>
 	
 
