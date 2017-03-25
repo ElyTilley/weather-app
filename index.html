@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Web 2 Starter</title>
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
  
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Normalize CSS makes browsers render all elements more consistently -->
@@ -21,41 +39,52 @@
 
 <!--   TODAY IN SPOKANE   -->
 <section id="spokane">
-  <a class="toggle-drawer">&#9776;</a>
+  <figure>
+      <a class="toggle-drawer">&#9776;</a>
   <h1 class="city">City</h1>
-  <h1><span class="temp">00</span>&#x2109;</h1>
+  <h1>
+      <span class="temp">00</span>&#x2109;
+      <i class=""> </i>
+  </h1>
   <h3>
       <span class="high">00</span>&#x2109;
       <span class="low">00</span>&#x2109;
   </h3>
-  <i class=""> </i>
-        
+  </figure>
 </section>
 
 
 <!--   TODAY IN TOLEDO   -->
 <section id="toledo">
-  <a class="toggle-drawer">&#9776;</a>
+  <figure>
+      <a class="toggle-drawer">&#9776;</a>
   <h1 class="city">City</h1>
-  <h1><span class="temp">00</span>&#x2109;</h1>
+  <h1>
+      <span class="temp">00</span>&#x2109;
+      <i class=""> </i>
+  </h1>
   <h3>
       <span class="high">00</span>&#x2109;
       <span class="low">00</span>&#x2109;
   </h3>
-  <i class=""> </i>
+  </figure>
 </section>
 
 <!--   TODAY IN A NEW LOCATION   -->
 <section id="local">
-  <a class="toggle-drawer">&#9776;</a>
+  <figure>
+      <a class="toggle-drawer">&#9776;</a>
   <h1 class="city">City</h1>
-  <h1><span class="temp">00</span>&#x2109;</h1>
+  <h1>
+      <span class="temp">00</span>&#x2109;
+      <i class=""> </i>
+  </h1>
   <h3>
       <span class="high">00</span>&#x2109;
       <span class="low">00</span>&#x2109;
   </h3>
-  <i class=""> </i>
   <h4><button>Set Location</button></h4>
+  </figure>
 </section>
 
 
@@ -66,9 +95,10 @@
     <li><a href="#spokane" id="city-1">Spokane</a></li>
     <li><a href="#toledo" id="city-2">Toledo</a></li>
     <li><a href="#local" id="city-3">Current Location</a></li>
+    <li><a class="toggle-drawer">&#x2715;</a></li>
   </ul>
   
-  <a class="toggle-drawer">&#x2715;</a>
+  
   
 </aside>
 	
