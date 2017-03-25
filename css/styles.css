@@ -18,6 +18,12 @@ aside {
   transition: left .25s;
 }
 
+div{
+    text-align: center;
+    font-size: 2em;
+    margin: 10px;
+}
+
 aside a {
     color: rgb(241,90,41);
     font-size: 1em;
