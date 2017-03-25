@@ -74,6 +74,8 @@ $('#local').click( function() {
 });
 
 // LOCAL for which Location has been set
+
+var getWeather = function(location) {
 $.simpleWeather({
     location: location,
     unit: 'f',
@@ -93,6 +95,6 @@ $.simpleWeather({
     }
   
   });
-
+};
 
 
